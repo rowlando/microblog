@@ -1,0 +1,8 @@
+{
+  "name": "Andy’s Micro Blog",
+  "url": "https://microblog.rowlando.dev",
+  "authorEmail": "nick@rowlando.com",
+  "authorHandle": "@rowlando",
+  "authorName": "Nick Rowlands",
+  "maxPostsPerPage": 5
+}
