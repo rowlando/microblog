@@ -27,7 +27,7 @@ module.exports = function(config) {
   config.addCollection('items', collection => {
     return collection
       .getFilteredByGlob('src/posts/*.md')
-      .sort((a, b) => Number(a.data.title) - Number(b.data.title));
+      .sort((a, b) => Number(a.fileSlug) - Number(b.fileSlug));
   });
 
   return {

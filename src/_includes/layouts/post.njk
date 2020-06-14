@@ -1,11 +1,11 @@
 {% extends 'layouts/base.njk' %}
 
-{% block pageTitle %}{{ title | dateFilter }}{% endblock %}
+{% block pageTitle %}{{ page.fileSlug | dateFilter }}{% endblock %}
 {% block content %}
 <div class="wrapper">
   <article class="post">
     <h1>
-      {{ title | dateFilter }}
+      {{ page.fileSlug | dateFilter }}
     </h1>
     {{ content | safe }}
   </article>
