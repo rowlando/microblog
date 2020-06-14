@@ -3,7 +3,7 @@
     <li class="feed__item">
       <article class="flow">
         <h3>
-          <a href="{{ item.url }}" rel="bookmark">{{ item.data.title | dateFilter }}</a>
+          <a href="{{ item.url }}" rel="bookmark">{{ item.fileSlug | dateFilter }}</a>
         </h3>
         {{ item.templateContent | safe }}
       </article>

@@ -16,9 +16,9 @@ permalink: '/feed.xml'
 	{% for item in collections.items | reverse | limitFilter(15) %}
   {% set absolutePostUrl %}{{ site.url }}{{ item.url | url }}{% endset %}
   <entry>
-    <title>{{ item.data.title | dateFilter }}</title>
+    <title>{{ item.fileSlug | dateFilter }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ item.data.title | w3DateFilter }}</updated>
+    <updated>{{ item.fileSlug | w3DateFilter }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html"><![CDATA[
       {{ item.templateContent | safe }}
