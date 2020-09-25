@@ -4,5 +4,6 @@
   "authorEmail": "nick@rowlando.com",
   "authorHandle": "@rowlando",
   "authorName": "Nick Rowlands",
-  "maxPostsPerPage": 5
+  "maxPostsPerPage": 5,
+  "baseImageURL": "https://res.cloudinary.com/rowlando/image/upload/c_scale,e_auto_contrast,r_0,w_619/v1592377296/microblog/"
 }
