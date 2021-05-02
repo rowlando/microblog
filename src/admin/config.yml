@@ -1,0 +1,29 @@
+site_url: https://microblog.rowlando.dev/
+backend:
+  name: git-gateway
+  # name: test-repo
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: rowlando
+    api_key: 714843726187742
+    default_transformations:
+      - - fetch_format: auto
+          width: 731
+          quality: auto
+          crop: scale
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: date
+    label: "Blog post" # Used in the UI
+    folder: "src/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}--{{hour}}:{{minute}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
