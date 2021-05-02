@@ -22,6 +22,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('src/_redirects');
   config.addPassthroughCopy('src/images');
   config.addPassthroughCopy('src/fonts');
+  config.addPassthroughCopy("src/admin/");
 
   // Add custom collection for items
   config.addCollection('items', collection => {
